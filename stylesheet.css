@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Mark Pro";
+    src: url('./Fonts/Mark-Pro-Heavy.otf');
+    font-weight: 700;
+}
+
+@font-face{
+    font-family: "Mark Pro Heavy";
+    font-style:normal;
+    src:local('Mark Pro'),url(https://fonts.cdnfonts.com/s/45235/MARKPROBOLD.woff); 
+}
+
+@font-face{
+    font-family:"Mark Pro";
+    font-style:normal;
+    font-weight:900;
+    src:local('Mark Pro'),url(https://fonts.cdnfonts.com/s/45235/MARKPROBLACK.woff);
+ 
+}
+
+@font-face {
+    font-family: 'Circular Std Book';
+    src: url('./Fonts/CircularStd-Book.woff2');
+    font-weight: 500;
+}
+
+
+:root {
+    --font-primary: #c4c4c4;
+    --bg-primary: #132418;
+    /*#10101a*/
+    --bg-secondary: #9fd1d4;
+}
+
+
+body {
+    background-color: var(--bg-primary);
+}
+
+
+h2 {
+    font-size: 2rem;
+    font-family: "Mark Pro";
+    letter-spacing: -.03rem;
+    font-weight: 900;
+    background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+p {
+    font-family: 'Circular Std Book';
+    font-size: 0.9rem;
+    color: var(--font-primary);
+    line-height: 130%;
+}
+
+
+/* This container takes up all the space.
+ That means it doesn't constrain its children size, 
+ if they go beyond screen width or height*/
+.screen-container {
+    box-sizing: border-box;
+    display: block;
+    /* pos:fixed is relative to the viewport*/
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+    background-color: var(--bg-primary)
+}
+
+
+/* I don't want this container to ever be wider than the screen.
+It should simply fill out its parent. 
+Aligns children since the child container has a max height. 
+On tablets and below we want the content to start
+at the top of the screen. */
+.screen-width-container {
+    max-width: 100vw;
+    height:100%;
+    box-sizing:border-box;
+    justify-content:center;
+    align-items:flex-start;
+    display:flex; 
+}
+
+
+/* If wider than a tablet, we'll center the child content-container
+and for that  we need to cover the whole viewport */
+@media screen and (min-width:900px) {
+    .screen-width-container {
+     height:100vh;
+     max-height:100vh;
+     align-items:center;
+     overflow:hidden
+    }
+}
+
+
+   /* The content container can be as big as the screen but should be max
+   1280px to maintain the "card" look on desktop. 
+   Why is pos:relative? Maybe for the z-index of the child? */
+.outer-content-container {
+    width:100vw;
+    max-width:1280px;
+    box-sizing:border-box;
+    margin-top:0;
+    margin-bottom:0;
+    padding:7.5px;
+    /*This display flex seems needed to enable the childs flex-basis:100, but doesnt seem
+    to change anything.*/
+    display:flex;
+    position:relative;
+    background-color: var(--bg-primary);
+}
+
+@media screen and (min-width:500px) {
+ .outer-content-container {
+    padding:20px
+ }
+}
+
+
+
+/* Has an additional padding of 15/30 and rounded borders, so it's height when empty 
+is caused by those. */
+.inner-content-container {
+    -webkit-user-select:none;
+    user-select:none;
+    z-index:2;
+    /*background:#1d1d20;*/
+    border-radius:5px;
+    /*flex-wrap:wrap;*/
+    /*What is the point of flex-basis:100%?? */
+    flex-basis:100%;
+    padding:15px;
+    overflow:hidden;
+    /*background-color: var(--bg-secondary);*/
+    border: 3px solid;
+    border-color: #b0f3f1;
+   }
+
+@media screen and (min-width:500px) {
+    .inner-content-container  {
+     padding:30px
+    }
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+}
+
+.navbar-list {
+    list-style: none;
+    display: flex;
+}
+
+.list-item {
+    margin: 0 14px;
+}
+
+.icon {
+    width: 25px;
+    height: 25px; 
+}
+
+
+.content {
+    /* This attribute may be present to make rotating the text less jarring */
+    backface-visibility: hidden;
+    display: flex;
+    /*The flex direction changes .overview flex-basis from width to height*/
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* Parent height - parent padding - 100px = height*/
+    min-height: calc(100% - 100px);
+    /*If we only set min-height, we dont get a calculated, inheritabe height it seems*/
+    height: calc(100% - 100px);
+
+}
+
+@media screen and (min-width:900px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 50px;
+    }
+}
+
+
+
+/* Sets the intial size of the container to 53% of the parents size?
+ But only in flex-dire: row, otherwise header+main+footer determine the size
+ of inner-content-container*/
+.overview {
+    position: relative;
+    flex-basis: 53.4752%;
+    border: 3px solid;
+    border-color: #8ee9ac;
+    aspect-ratio: 16/9;
+}
+
+
+@media screen and (max-width: 900px) {
+    .overview {
+        aspect-ratio: 0;
+        min-height: 350px;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .overview {
+       aspect-ratio: 0;
+    }
+}
+
+
+/*Will be manipulated for animation purposes*/
+.first-message {
+    transform-origin: top right;
+opacity: 0;
+transform: scaleX(0);
+transition: all 3s linear;
+}
+
+
+.message-title {
+    font-size: 7rem;
+    font-family: "Mark Pro";
+    letter-spacing: -.03rem;
+    font-weight: 900;
+    background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+@media screen and (max-width: 900px) {
+    .message-title {
+        font-size: 5rem;
+    }
+}
+
+
+@media screen and (max-width:500px) {
+    .message-title {
+        font-size: 3rem;
+    }
+}
+
+
+.color-line {
+    margin-left: 30px;
+    font-size: .9em;
+    font-weight: 100;
+    line-height: 1.6;
+    display: block;
+    position: relative;
+}
+
+.color-line:before {
+    content:"";
+    width:2px;
+    background:linear-gradient(0deg,red 0%, white 100%);
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:-30px
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 35px 0 27px;
+    font-size: 14px;
+}
+
+@media screen and (min-width:500px) {
+    .footer  {
+     text-align: right;
+    }
+}
+
+/* We want this to happen on click, or on hover.
+On load seemingly is done with javascript. */
+.project {
+    transform-origin: 100%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 3s linear;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+}
+
+.project-show {
+    opacity: 1;
+    transform: scaleX(1);
+    
+}
+
+.menu {
+    flex-basis: 30%;
+}
+
+.menu-list {
+    position: relative;
+}
+
+.menu-list::before {
+    content: " ";
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg,var(--grad-1)0%,var(--grad-2)50%,var(--grad-1)100%);
+    opacity: 1;
+    border-top-left-radius: 8px;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: -2px;
+}
+
+.menu-list::after {
+    content: " ";
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(135deg,var(--grad-2)0%,var(--grad-1)50%,var(--grad-2)100%);
+    opacity: 0;
+    border-top-left-radius: 8px;
+    transition: all .3s ease-in-out;
+    position: absolute;
+    top: -2px;
+    bottom: 0;
+    left: -2px;
+}
+
+.links {
+    z-index: 1;
+    background: #1d1d20;
+    border-top-left-radius: 7px;
+    flex-direction: column;
+    margin-left: 0;
+    padding: 30px 30px 0;
+    display: flex;
+    position: relative;
+}
+
+
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+   height: 100%;
+    width: 100%;
+    background-color: #8ee9ac;
+    border-radius: 2.5rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.project-description {
+max-height: 100%;
+
+}
+
+/* How do i get the images to respect the ratio of the div?*/
+.project-image {
+    height: 80%;
+    border-radius: 1.5rem;   
+}
