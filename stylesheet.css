@@ -404,7 +404,10 @@ a {
 
 .links {
     z-index: 1;
-    
+    font-family: 'Circular Std Book';
+    font-size: 0.9rem;
+    color: var(--font-primary);
+    line-height: 130%;
     border-top-left-radius: 7px;
     flex-direction: column;
     margin-left: 0;
@@ -453,5 +456,47 @@ border-color: #c4c4c4;
 @media  screen and (max-width: 400px) {
     .project-image {
         max-width: 300px;  
+    }
+}
+
+
+/* Skills Section */
+/*
+.skills-container {
+    width: 100%;
+    border-radius: 3.5rem;
+    border: 1px solid;
+    border-color: #c4c4c4;
+}*/
+
+.skills-container {
+    width: 100%;
+    border-radius: 3rem;
+    border: 1px solid;
+    border-color: #c4c4c4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgb(10, 32, 25);
+}
+
+.row {
+   justify-content: center;
+    display: flex; 
+}
+
+.skill {
+    height: 100%; 
+}
+
+.skill-icon {
+    height: auto;
+    padding: 0.5rem;
+}
+
+@media screen and (max-width: 350px) {
+    .skill-icon {
+        padding: 0.2rem;
     }
 }
