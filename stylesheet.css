@@ -373,7 +373,7 @@ On load seemingly is done with javascript. */
     content: " ";
     width: 90px;
     height: 90px;
-    background: linear-gradient(135deg,var(--grad-1)0%,var(--grad-2)50%,var(--grad-1)100%);
+    /*background: linear-gradient(135deg,var(--grad-1)0%,var(--grad-2)50%,var(--grad-1)100%);*/
     opacity: 1;
     border-top-left-radius: 8px;
     transition: all .3s ease-in-out;
@@ -413,12 +413,15 @@ a {
     position: relative;
 }
 
+.link {
+    margin-bottom: 0.5rem;
+}
 
 
 .project-card {
     display: flex;
     flex-direction: column;
-
+        padding: 0 20px;
     background-color: #385042b0;
     border: 1px solid;
     border-color: #c4c4c4;
@@ -441,8 +444,10 @@ border-color: #c4c4c4;
 /* How do i get the images to respect the ratio of the div?*/
 .project-image {
     width: 100%;
-    padding: 0 20px;
-    border-radius: 3.5rem;   
+
+    border-radius: 3.5rem;
+    border: 1px solid;
+    border-color: #c4c4c4;   
 }
 
 @media  screen and (max-width: 400px) {

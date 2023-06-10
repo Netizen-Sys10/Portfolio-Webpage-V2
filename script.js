@@ -51,5 +51,10 @@ $('#logo-link').on('click', function () {
 })
 
 $(window).on('resize', () => { 
+    setTimeout(function () {
     $('.overview').css({'height': $('.project-show').height()});
-})
+    console.log( 'are we resizing?');
+}, 5)
+});
+
+
