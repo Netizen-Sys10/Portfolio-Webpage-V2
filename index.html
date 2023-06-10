@@ -19,11 +19,11 @@
                 <div class="inner-content-container">
                     <header>
                         <nav class="navbar" role="navigation">
-                            <img class="logo" src="Images/logo.png" alt="">
+                           <img id="logo-link" class="logo" src="Images/logo.png" alt="">
                             <ul class="navbar-list">
                                 <li class="list-item"><img class="icon" src="Images/gmail.svg" alt=""></li>
-                                <li class="list-item"><img class="icon" src="Images/linkedin.svg" alt=""></li>
-                                <li class="list-item"><img class="icon" src="Images/github.svg" alt=""></li>
+                                <li class="list-item"><a target="_blank" href="https://www.linkedin.com/in/simon-g-4b80981ba"><img class="icon" src="Images/linkedin2.svg" alt=""></a></li>
+                                <li class="list-item"><a target="_blank" href="https://github.com/Simon-G1"><img class="icon" src="Images/github3.svg" alt=""></a></li>
                             </ul>
                         </nav>
                     </header>
@@ -37,36 +37,51 @@
                                     <h1  class="message-title ">Welcome</h1>
                                 </div>
                                 <span class="color-line">
-                                    <p>My name is Simon G., I'm a BI Analyst based in Hesse, Germany. 
+                                    <p>My name is Simon G, I'm a BI Analyst based in Hesse, Germany. 
                                         I'm currently finishing my master's degree in Business Administration and completing
-                                        a web development bootcamp.</p>
-                                    <p>I'm passionate about sleek, minimalistic design, and intuitively implemented UX. </p>
+                                        a web development bootcamp.</p><br>
+                                    <p>I like to create sleek, minimalistic designs, and implemented accessible UX. </p>
                                 </span>
                             </div>
                             <!-- The project class is for animating the transition from one project to another.
                             All project divs are layered on top of each other. I think they're then just rotated and faded when they hit
                             a right angle to the viewer.-->
-                            <div id="project-1" class="project">
-                                <h2 >Matrix Overload</h2>
-                                <span>
-                                    <p></p>
-                                    <button></button>
-                                    <button></button>
-                                </span>
+                            <div id="project-1" class="project project-card">
+                                <div class="project-description">
+                                 <h2>Webpage V1</h2>
+                                 <a href=""><img class="icon" src="Images/github.svg" alt=""></a>
+                             </div class="image-container">
+                                <picture>
+                                    <source srcset="Images/Banner.png" media="(min-width: 700px)">
+                                    <source srcset="Images/webpage_banner2.png" media="(min-width: 401px)">
+                                    <source srcset="Images/webpage_banner3.png" media="(max-width: 400px)">
+                                    <img class="project-image" src="Images/Banner.png" alt="">
+                                </picture>
+                              
                             </div>
-                            <div id="project-2" class="project">
-                                <h2>Personal Site V1</h2>
+                            
+                            <div id="project-2" class="project project-card">
+                                <div class="project-description">
+                                 <h2>Matrix Overload</h2>
+                                 <a href=""><img class="icon" src="Images/github.svg" alt=""></a>
+                             </div>
+                                <picture>
+                                    <source srcset="Images/Matrix_overload_banner.png" media="(min-width: 700px)">
+                                    <source srcset="Images/Matrix_overload_banner2.png" media="(min-width: 401px)">
+                                    <source srcset="Images/matrix_overload_banner3.png" media="(max-width: 400px)">
+                                    <img class="project-image" src="Images/Matrix_overload_banner.png" alt="">
+                                </picture>
+                              
                             </div>
+
+
                             <div id="project-3" class="project project-card">
                                <div class="project-description">
-                                <h2>Title</h2>
+                                <h2>Skills</h2>
                                 <a href=""><img class="icon" src="Images/github.svg" alt=""></a>
                             </div>
                                <img class="project-image" src="Images/island.jpg" alt="">
-                                
-                                
-                            
-                               
+                              
                             </div>
                         </div>
                         <div class="highlight"></div>
@@ -90,18 +105,24 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-    <script>
-        VANTA.FOG({
-            el: "#vanta",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00
-        })
-    </script>
+
+
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
+<script>
+VANTA.FOG({
+  el: "#vanta",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  highlightColor: 0x709362,
+  midtoneColor: 0x5d937d,
+  lowlightColor: 0x255f3b,
+  baseColor: 0x172a2a
+})
+</script>
 
 </body>
 
