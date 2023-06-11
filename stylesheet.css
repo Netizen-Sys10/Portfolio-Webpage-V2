@@ -36,6 +36,8 @@
     --bg-primary: #051108de;
     /*#10101a,#132418 */
     --bg-secondary: #9fd1d4;
+    --grad-1 : #9fd1d4 ;
+    --grad-2 : #b19fd4;
 }
 
 
@@ -45,11 +47,12 @@ body {
 
 
 h2 {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: "Mark Pro";
-    letter-spacing: -.03rem;
+    -webkit-text-stroke: 1px white;
+    letter-spacing: 0.3rem;
     font-weight: 900;
-    background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+    background-image: linear-gradient(90deg,#ffffff00,#ffffff00); /*linear-gradient(90deg,#b0f3f1,#ffcfdf);*/
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -70,7 +73,7 @@ h2 {
 
 p {
     font-family: 'Circular Std Book';
-    font-size: 0.9rem;
+    font-size:1rem;
     color: var(--font-primary);
     line-height: 130%;
 }
@@ -103,7 +106,7 @@ at the top of the screen. */
     height:100%;
     box-sizing:border-box;
     justify-content:center;
-    align-items:flex-start;
+    align-items:center;
     display:flex; 
 }
 
@@ -201,8 +204,8 @@ is caused by those. */
     display: flex;
     /*The flex direction changes .overview flex-basis from width to height*/
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     /* Parent height - parent padding - 100px = height*/
     /*min-height: calc(100% - 100px);*/
     /*If we only set min-height, we dont get a calculated, inheritabe height it seems*/
@@ -269,10 +272,11 @@ transition: all 0.2s linear;
 
 .message-title {
     font-size: 7rem;
+    -webkit-text-stroke: 1px white;
     font-family: "Mark Pro";
-    letter-spacing: -.03rem;
+    letter-spacing: 0.3rem;
     font-weight: 900;
-    background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
+    background-image: linear-gradient(90deg,#b0f3f100,#ffcfdf00);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -356,6 +360,8 @@ On load seemingly is done with javascript. */
     flex-basis: 30%;
 }
 
+
+
 @media screen and (max-width:1024px) {
     .project  {
         min-height: 250px;
@@ -367,6 +373,7 @@ On load seemingly is done with javascript. */
 
 .menu-list {
     position: relative;
+    text-align: center;
 }
 
 .menu-list::before {
@@ -405,7 +412,7 @@ a {
 .links {
     z-index: 1;
     font-family: 'Circular Std Book';
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--font-primary);
     line-height: 130%;
     border-top-left-radius: 7px;
@@ -422,18 +429,24 @@ a {
 
 
 .project-card {
+
     display: flex;
     flex-direction: column;
     padding: 0 20px 1rem;
-    background-color: #385042b0;
-    border: 1px solid;
+    /*background-color: #385042b0;*/
+    /*border: 1px solid;*/
     border-color: #c4c4c4;
-    border-radius: 2.5rem;
+    border-radius: 0.5rem;
     overflow: hidden;
     justify-content: center;
     align-items: center;
 }
 
+
+.menu-title {
+    display: block;
+    text-align: center;
+}
 
 .project-description {
 max-height: 100%;
@@ -448,7 +461,7 @@ border-color: #c4c4c4;
 .project-image {
     width: 100%;
 
-    border-radius: 3.5rem;
+    border-radius: 0.5rem;
     border: 1px solid;
     border-color: #c4c4c4;   
 }
@@ -471,7 +484,7 @@ border-color: #c4c4c4;
 
 .skills-container {
     width: 100%;
-    border-radius: 3rem;
+    border-radius: 0.5rem;
     border: 1px solid;
     border-color: #c4c4c4;
     display: flex;
@@ -491,7 +504,7 @@ border-color: #c4c4c4;
 }
 
 .skill-icon {
-    height: auto;
+    height: 50px;
     padding: 0.5rem;
 }
 

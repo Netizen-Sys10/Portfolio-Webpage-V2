@@ -7,11 +7,11 @@ $(window).on('load', () => {
              // set the overview container to the height of the current project
              $('.overview').css({'height':$('.project-show').height()});
             // skill container same size as image
-            $('.skills-container').css({'height': $('.project-image').height()});
+            //$('.skills-container').css({'height': $('.project-image').height()});
             // orient skill icon around project img width
-            $('.skill-icon').css({'width': ($('.project-image').width()-20)/3});
+            //$('.skill-icon').css({'width': ($('.project-image').width()-20)/3});
             // reset the icon height to avoid scaling issues
-            $('.skill-icon').css({'height': 'auto'});
+            //$('.skill-icon').css({'height': 'auto'});
             console.log('on load overview - portrait: ' + $('.overview').height())
             console.log('on load skills-container - portrait: ' + $('.skills-container').height())
            
@@ -20,9 +20,9 @@ $(window).on('load', () => {
             $('.overview').css({'height':$('.project-show').height()});
             $('.skills-container').css({'height': $('.project-image').height()});
             // orient skill icon around project img height
-            $('.skill-icon').css({'height': ($('.project-image').height()-20)/3});
+            //$('.skill-icon').css({'height': ($('.project-image').height()-20)/3});
             // reset the icon width to avoid scaling issues
-            $('.skill-icon').css({'width': 'auto'});
+            //$('.skill-icon').css({'width': 'auto'});
             console.log('on load - landscape: ' + $('.overview').height())
             console.log('on load - landscape: ' + $('.skills-container').height())            
         } 
@@ -46,15 +46,15 @@ $(window).on('resize', () => {
     setTimeout(function () {
         if ($('.project-image').height() > $('.project-image').width() ) {
             $('.skills-container').css({'height': $('.project-image').height()});
-            $('.skill-icon').css({'width': ($('.project-image').width()-20)/3});
-            $('.skill-icon').css({'height': 'auto'});
+           // $('.skill-icon').css({'width': ($('.project-image').width()-20)/3});
+            //$('.skill-icon').css({'height': 'auto'});
             console.log( 'portrait - skills container changed' +$('.skills-container').height() );
         }
 
         else {
             $('.skills-container').css({'height': $('.project-image').height()});
-            $('.skill-icon').css({'height': ($('.project-image').height()-20)/3});
-            $('.skill-icon').css({'width': 'auto'});
+            //$('.skill-icon').css({'height': ($('.project-image').height()-20)/3});
+            //$('.skill-icon').css({'width': 'auto'});
             console.log( 'landscape - skills container changed' +$('.skills-container').height() );
         }
     
