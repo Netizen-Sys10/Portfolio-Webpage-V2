@@ -106,7 +106,7 @@ at the top of the screen. */
     height:100%;
     box-sizing:border-box;
     justify-content:center;
-    align-items:center;
+    align-items:flex-start;
     display:flex; 
 }
 
@@ -508,8 +508,3 @@ border-color: #c4c4c4;
     padding: 0.5rem;
 }
 
-@media screen and (max-width: 350px) {
-    .skill-icon {
-        padding: 0.2rem;
-    }
-}
