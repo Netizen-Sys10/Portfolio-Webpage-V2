@@ -27,6 +27,7 @@ $(window).on('load', () => {
             console.log('on load - landscape: ' + $('.skills-container').height())            
         } 
 }, 5)
+
 if ($('html').height() >= $('.outer-content-container').height()) {
     $('.vanta-canvas').css({'height': $('html').height()});
 }
