@@ -43,8 +43,12 @@
 
 body {
     background-color: var(--bg-primary);
+    min-height: 100%;
 }
 
+html {
+    min-height: 100%;
+}
 
 h2 {
     font-size: 3rem;
@@ -92,6 +96,7 @@ p {
     left: 0;
     right: 0;
     overflow-y: auto;
+    height: 100%;
     background-color: var(--bg-primary)
 }
 
@@ -383,33 +388,7 @@ On load seemingly is done with javascript. */
     text-align: center;
 }
 
-.menu-list::before {
-    content: " ";
-    width: 90px;
-    height: 90px;
-    /*background: linear-gradient(135deg,var(--grad-1)0%,var(--grad-2)50%,var(--grad-1)100%);*/
-    opacity: 1;
-    border-top-left-radius: 8px;
-    transition: all .3s ease-in-out;
-    position: absolute;
-    top: -2px;
-    bottom: 0;
-    left: -2px;
-}
 
-.menu-list::after {
-    content: " ";
-    width: 90px;
-    height: 90px;
-    background: linear-gradient(135deg,var(--grad-2)0%,var(--grad-1)50%,var(--grad-2)100%);
-    opacity: 0;
-    border-top-left-radius: 8px;
-    transition: all .3s ease-in-out;
-    position: absolute;
-    top: -2px;
-    bottom: 0;
-    left: -2px;
-}
 
 a {
     text-decoration: none;
@@ -516,7 +495,7 @@ border-color: #c4c4c4;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(10, 32, 25);
+    background-color: rgba(10, 32, 25, 0);
 }
 
 .row {
@@ -530,7 +509,7 @@ border-color: #c4c4c4;
 
 .skill-icon {
     height: 50px;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem -0;
     margin-bottom: 0.4rem;
 }
 
@@ -559,8 +538,12 @@ border-color: #c4c4c4;
     border-radius: 6px;
     position: absolute;
     top: 90%;
-    left: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
+}
+
+.test {
+    width: 800px;
 }
 
 .email {

@@ -27,14 +27,40 @@ $(window).on('load', () => {
             console.log('on load - landscape: ' + $('.skills-container').height())            
         } 
 }, 5)
+if ($('html').height() >= $('.outer-content-container').height()) {
+    $('.vanta-canvas').css({'height': $('html').height()});
+}
+else {
+    if($(window).width() < 500) {
+         $('.vanta-canvas').css({'height': $('.outer-content-container').height()+15});
+    }
+    else {
+        $('.vanta-canvas').css({'height': $('.outer-content-container').height()+40});
+    }
+}
 });
 
 
 
 var intervalId = setInterval(function() {
+  
     $('.overview').css({'height': $('.project-show').height()});
-  }, 100);
+  }, 20);
 
+
+  var intervalId = setInterval(function() {
+    if ($('html').height() >= $('.outer-content-container').height()) {
+        $('.vanta-canvas').css({'height': $('html').height()});
+    }
+    else {
+        if($(window).width() < 500) {
+             $('.vanta-canvas').css({'height': $('.outer-content-container').height()+15});
+        }
+        else {
+            $('.vanta-canvas').css({'height': $('.outer-content-container').height()+40});
+        }
+    }
+  }, 100);
 
 $(window).on('resize', () => {
     // Whenever you resize make overview as high as the current project 
