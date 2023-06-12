@@ -476,6 +476,13 @@ border-color: #c4c4c4;
     }
 }
 
+.github-icon {
+    color: white;
+}
+
+.project-title {
+    margin-right: 1rem;
+}
 
 /* Skills Section */
 /*
@@ -508,9 +515,8 @@ border-color: #c4c4c4;
 }
 
 .skill-icon {
-    height: 50px;
-    padding: 0.5rem 1rem 0.5rem -0;
-    margin-bottom: 0.4rem;
+    height: 34px;
+    margin: 1rem 0.8rem 1rem 0;
 }
 
 .skill-icon:hover {
@@ -521,6 +527,7 @@ border-color: #c4c4c4;
 .tooltip-text {
     display: none;
     color: white;
+    margin-top: -0.15rem;
 }
 
 .skill-div {
@@ -529,7 +536,7 @@ border-color: #c4c4c4;
     margin-bottom: 0.2rem;
 }
 
-.skill-div:hover .tooltip-text {
+.skill-icon:hover + .tooltip-text {
     display: block;
     width: auto;
     color: var(--font-primary);
@@ -538,7 +545,7 @@ border-color: #c4c4c4;
     border-radius: 6px;
     position: absolute;
     top: 90%;
-    left: 30%;
+    left: 38%;
     transform: translate(-50%, -50%);
 }
 
