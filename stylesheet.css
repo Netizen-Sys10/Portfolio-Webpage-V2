@@ -332,7 +332,7 @@ transition: all 0.2s linear;
     width: 100%;
     text-align: center;
     padding: 35px 0 0px;
-    font-size: 14px;
+
 }
 
 @media screen and (min-width:500px) {
@@ -381,6 +381,15 @@ On load seemingly is done with javascript. */
     }
     .menu {
         margin-top: 4rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media screen and (max-width:295px) {
+
+    .menu {
+        margin-top: 4rem;
+        margin-bottom: 2.5rem;
     }
 }
 
@@ -538,6 +547,37 @@ display: flex;
     transform: translate(-50%, -50%);
 }
 
+.email-address {
+    font-size: 0.9rem;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 90%;
+    transition: all 0s linear;
+}
+
+@media screen and (max-width: 1024px) {
+    .email-address {
+        bottom: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 0s linear;
+        
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .email-address {
+        bottom: 10px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        transition: all 0s linear;
+  
+    }
+}
+
 
 .email {
     transition: all linear 0.15s;
@@ -547,10 +587,17 @@ display: flex;
     -webkit-text-fill-color: transparent;
 }
 
+@media screen and (max-width: 500px) {
+    .email {
+        font-size: 1.2rem;
+  
+    }
+}
+
 
 .email-reverse {
     transition: all linear 0.25s;
-    font-size: 1rem;
+    font-size: 0.9rem;
     /*background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;*/
