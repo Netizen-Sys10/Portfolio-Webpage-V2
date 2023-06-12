@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon G. | Web Developer</title>
+    <link rel="icon" type="image/png" href="Images/logo3.png">
+    <link rel="stylesheet" href="stylesheet.css">
+
+
+</head>
+
+<body >
+    <div class="wrapper">
+        <div class="card">
+            <div class="card-item my-div">
+                <img class="card-image" src="Images/Banner.png" alt="">
+                <img class="card-image"src="Images/Banner2.png" alt="">
+             </div>
+
+</div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.153.0/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/gsap.min.js"></script>
+    <script src="hover-effect.umd.js"></script>
+    <script>
+        var myAnimation = new hoverEffect({
+            parent: document.querySelector('.card-item'),
+            intensity: 0.3,
+            image1: 'Images/Banner.png',
+            image2: 'Images/Banner2.png',
+            displacementImage: '4.png',
+            imagesRatio: 1500 /1080,
+        });
+    </script>
+</body>
+
+</html>
