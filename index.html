@@ -21,7 +21,7 @@
                         <nav class="navbar" role="navigation">
                             <img id="logo-link" class="logo" src="Images/logo6.png" alt="">
                             <ul class="navbar-list">
-                                <li class="list-item"><img class="icon" src="Icons/mail (2).svg" alt=""></li>
+                                <li id="email" class="list-item"><a href="#footer"><img class="icon" src="Icons/mail (2).svg" alt=""></a></li>
                                 <li class="list-item"><a target="_blank"
                                         href="https://www.linkedin.com/in/simon-g-4b80981ba"><img class="icon"
                                             src="Images/linkedin2.svg" alt=""></a></li>
@@ -47,15 +47,16 @@
                                     <p>I like to create sleek, minimalistic designs, 
                                         and implemented accessible UX. </p><br>
                                     <p>I work with: <br>
-                                        <img class="skill-icon" src="Icons/html-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/bs-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/css-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/js-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/sql-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/ts-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/git-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/py-grey.svg" alt="">
-                                        <img class="skill-icon" src="Icons/godot-grey.svg" alt="">
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/html-grey.svg" alt="">
+                                        <span class="tooltip-text">HTML</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/bs-grey.svg" alt=""><span class="tooltip-text">Bootstrap</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/css-grey.svg" alt=""><span class="tooltip-text">CSS</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/js-grey.svg" alt=""><span class="tooltip-text">Javascript</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/sql-grey.svg" alt=""><span class="tooltip-text">SQL</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/ts-grey.svg" alt=""><span class="tooltip-text">Typescript</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/git-grey.svg" alt=""><span class="tooltip-text">Git</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/py-grey.svg" alt=""><span class="tooltip-text">Python</span></div>
+                                        <div class="skill-div"><img class="skill-icon" src="Icons/godot-grey.svg" alt=""><span class="tooltip-text">Godot</span></div>
                                     </p>
                                     
                                 </span>
@@ -184,18 +185,20 @@
 
                         <div class="highlight"></div>
                         <div class="menu">
-                            <h2 class="menu-title">Projects</h2>
+                            <h2 class="menu-title">Pages</h2>
                             <div class="menu-list"> <!-- project-wrapper.-->
                                 <div class="links">
-                                    <a class="link" id="link-1" rel="noopener" href=#>Webpage V1</a>
-                                    <a class="link" id="link-2" rel="noopener" href=#>Matrix Overload</a>
-                                    <a class="link" id="link-3" rel="noopener" href=#>Skills</a>
+                                    <div class="link-cont"><a class="link current-link" id="link-3" rel="noopener" href=#>Home</a></div>
+                                    
+                                   <div class="link-cont"> <a class="link" id="link-1" rel="noopener" href=#>Webpage V1</a></div>
+                                   <div class="link-cont"> <a class="link" id="link-2" rel="noopener" href=#>Matrix Overload</a></div>
+                                    
                                 </div>
                             </div>
                         </div>
                     </main>
-                    <footer class="footer">
-                        <p>©2023 name.user@gmail.com</p>
+                    <footer id="footer" class="footer">
+                        <p class="email-address">©2023 simon.g.business@gmail.com</p>
                     </footer>
                 </div>
             </div>

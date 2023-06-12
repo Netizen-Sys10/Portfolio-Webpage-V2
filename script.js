@@ -99,16 +99,48 @@ $('#link-2').on('click', function () {
 $('#link-3').on('click', function () {
  
     $('.project-show').removeClass('project-show');
-    projectThird.addClass('project-show');
-    $('.overview').css({'height': projectOne.height()});
+    $('.first-message').addClass('project-show');
+    $('.overview').css({'height':  $('.first-message').height() });
+
     console.log( 'Link3 overview height adjusted ' + $('.overview').height());
 });
 
 
 $('#logo-link').on('click', function () {
+    
     $('.project-show').removeClass('project-show');
     $('.first-message').addClass('project-show');
-    $('.overview').css({'height':$('.first-message').height() });
+    $('#logo-link').addClass('logo-rotate');
+    $('.current-link').removeClass('current-link')
+    $('#link-3').addClass('current-link');
+    $('.overview').css({'height':  $('.first-message').height() });
+    setTimeout(function () {
+        $('#logo-link').removeClass('logo-rotate');
+    }, 200)
 
     console.log( 'Link4 overview height adjusted ' + $('.overview').height());
 })
+
+
+$('#email').on('click', function () {
+    $('.email-address').removeClass('email-reverse');
+    $('.email-address').addClass('email');
+    setTimeout(function () {
+        $('.email-address').removeClass('email');
+        $('.email-address').addClass('email-reverse');
+    }, 1800)
+})
+
+var link_array = $(".link");
+//link_array.each( function () {
+  //  $('.link').addClass('current-link');
+//});
+console.log(link_array)
+
+for (let link of link_array) {
+    $(link).on('click', () => {
+        $('.current-link').removeClass('current-link')
+        $(link).addClass('current-link');
+    })
+}
+
