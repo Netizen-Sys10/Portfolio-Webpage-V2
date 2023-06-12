@@ -142,7 +142,7 @@ and for that  we need to cover the whole viewport */
     to change anything.*/
     display:flex;
     position:relative;
-    background-color: var(--bg-primary);
+    /*background-color: var(--bg-primary);*/
 }
 
 @media screen and (min-width:500px) {
