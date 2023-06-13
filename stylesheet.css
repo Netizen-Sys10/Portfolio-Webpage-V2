@@ -401,7 +401,7 @@ On load seemingly is done with javascript. */
     }
     .menu {
         margin-top: 4rem;
-        margin-bottom: 1.5rem;
+        margin-bottom: 12rem;
     }
 }
 
@@ -409,12 +409,12 @@ On load seemingly is done with javascript. */
 
     .menu {
         margin-top: 4rem;
-        margin-bottom: 2.5rem;
+        margin-bottom: 11rem;
     }
 }
 
 .menu-list {
-    position: relative;
+    position: absolute;
    /* text-align: center; */
 }
 
@@ -439,6 +439,15 @@ a {
     position: relative;
 }
 
+@media screen and (max-width: 1024px) {
+    .links {
+        padding: 30px 0;
+    }
+    .color-line-two:before {
+        left: -15px
+    }
+}
+
 .link {
    color:#e9e9e9;
 }
@@ -446,6 +455,7 @@ a {
 
 .link-cont {
     padding-bottom: 0.5rem;
+    width: max-content;
 }
 
 .link:hover {
@@ -770,4 +780,29 @@ display: flex;
         text-align: right;
         margin-bottom: 0;
     }    
+    .overlay-link {
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%,-65%);
+    }
+    .overlay-github {
+        
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%,-80%);
+    }
+}
+
+@media screen and (max-width: 310px) {
+    .overlay-link {
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%,-70%);
+    }
+    .overlay-github {
+        
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%,-85%);
+    }
 }
