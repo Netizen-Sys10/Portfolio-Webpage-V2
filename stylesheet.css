@@ -48,6 +48,7 @@ body {
 
 html {
     min-height: 100%;
+    
 }
 
 h2 {
@@ -367,7 +368,13 @@ On load seemingly is done with javascript. */
     flex-basis: 30%;
 }
 
-
+@media screen and (min-width : 1025px) {
+    .menu {
+        position: relative;
+        top: -18px;
+    }
+    
+}
 
 @media screen and (max-width:1024px) {
     .project  {
@@ -587,6 +594,8 @@ display: flex;
 }
 
 
+
+
 .email {
     transition: all 0s linear;
     font-size: 1.4rem;
@@ -776,4 +785,96 @@ display: flex;
         left: 50%;
         transform: translate(-50%,-85%);
     }
+}
+
+.name-container {
+    display: flex;
+    height: 10%;
+    margin-bottom: 1rem;
+}
+
+.col-lg-6 {
+    width: 50%;
+    flex: 0 0 auto;
+    justify-content: center;
+    display: flex;
+
+}
+
+.first-name {
+    padding-right: 10px;
+    height: 100%;
+}
+
+.last-name {
+    padding-left: 10px;
+    height: 100%;
+}
+
+#first-input {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 3px;
+    height: 100%;
+}
+
+#second-input {
+    max-width: 100%;
+    width: 100%;
+    padding-left: 3px;
+    height: 100%;
+}
+
+
+
+.email-input {
+    height: 10%;
+}
+
+.your-message{
+    min-height: 50%;
+    
+}
+
+.your-message::placeholder {
+    position: absolute;
+    top: 2%;
+    left: 2px;
+    
+}
+
+.submit-cont {
+    text-align: center;
+   min-height: 10%;
+}
+
+
+.submit-button {
+    width: 150px;
+    height: 100%;
+}
+
+.input-margin {
+    margin-bottom: 1rem;
+}
+
+.form-padding {
+    padding-left: 3px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-container {
+    background-color: #b0f3f1;
+    width: 100%;
+}
+
+label {
+    font-family: 'Circular Std Book';
+    font-size:1rem;
+    color: var(--font-primary);
+    line-height: 130%;
 }

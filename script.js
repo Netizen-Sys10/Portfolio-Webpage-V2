@@ -38,6 +38,7 @@ var intervalId = setInterval(function () {
 
 
 var intervalId = setInterval(function () {
+    $('.contact-form').css( { 'height' :  $('.picture').height()})
     if ($('html').height() >= $('.outer-content-container').height()) {
         $('.vanta-canvas').css({ 'height': $('html').height() });
     }
@@ -50,6 +51,7 @@ var intervalId = setInterval(function () {
         }
     }
 }, 100);
+
 
 $(window).on('resize', () => {
     // Whenever you resize make overview as high as the current project 
@@ -86,7 +88,7 @@ $(window).on('resize', () => {
 const linkOne = $('#link-1');
 const projectOne = $('#project-1');
 const projectTwo = $('#project-2');
-const projectThird = $('#project-3');
+const projectThree = $('#project-3');
 const firstMessage = $('.first-message');
 
 
@@ -121,6 +123,15 @@ $('#link-3').on('click', function () {
 });
 
 
+$('#link-4').on('click', function () {
+
+    $('.project-show').removeClass('project-show');
+    projectThree.addClass('project-show');
+    $('.overview').css({ 'height': projectOne.height() });
+    console.log('Link4 overview height adjusted ' + $('.overview').height());
+});
+
+
 $('#logo-link').on('click', function () {
 
     $('.project-show').removeClass('project-show');
@@ -138,13 +149,36 @@ $('#logo-link').on('click', function () {
 
 
 $('#email').on('click', function () {
+    $('.current-link').removeClass('current-link')
+    $('#link-4').addClass('current-link');
+    $('.project-show').removeClass('project-show');
+    projectThree.addClass('project-show');
+   //setTimeout(function () {$('#first-input').trigger( "focus")}, 100)
+
+    $('.overview').css({ 'height': projectOne.height() });
+    $('.contact-form').css( { 'height' :  $('.picture').height()})
+   
+    console.log('Link2 overview height adjusted ' + $('.overview').height());
+
     $('.email-address').removeClass('email-reverse');
     $('.email-address').addClass('email');
     setTimeout(function () {
         $('.email-address').removeClass('email');
         $('.email-address').addClass('email-reverse');
     }, 1800)
+    
 })
+
+let form = $('.contact-form');
+$('#btnsubmit').on('click', () => {
+    setTimeout(function () {
+        form[0].reset();
+        console.log('the form has been reset')
+    }, 2000)
+   
+})
+
+
 
 var link_array = $(".link");
 //link_array.each( function () {
