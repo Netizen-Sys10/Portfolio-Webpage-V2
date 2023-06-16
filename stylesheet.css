@@ -812,14 +812,14 @@ display: flex;
     height: 100%;
 }
 
-#first-input {
+#firstinput {
     max-width: 100%;
     width: 100%;
     padding-left: 3px;
     height: 100%;
 }
 
-#second-input {
+#secondinput {
     max-width: 100%;
     width: 100%;
     padding-left: 3px;

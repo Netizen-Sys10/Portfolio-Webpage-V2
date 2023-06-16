@@ -169,14 +169,14 @@ $('#email').on('click', function () {
     
 })
 
-let form = $('.contact-form');
+/*let form = $('.contact-form');
 $('#btnsubmit').on('click', () => {
     setTimeout(function () {
-        form[0].reset();
+        //form[0].reset();
         console.log('the form has been reset')
     }, 2000)
    
-})
+})*/
 
 
 
@@ -189,7 +189,73 @@ console.log(link_array)
 for (let link of link_array) {
     $(link).on('click', () => {
         $('.current-link').removeClass('current-link')
+       
         $(link).addClass('current-link');
     })
 }
+
+console.log($('#firstinput').value)
+
+
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_ss3aryr';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+
+
+
+
+/*function sendMail () {
+    debugger;
+    var params = {
+        to_name : $('#firstinput').value,
+        from_name : $('#secondinput').value,
+        reply_to : $('#emailfield').value,
+        message : $('#textarea').value
+    };
+
+    const serviceID = 'service_czdumbk';
+const templateID = 'template_ss3aryr';
+
+emailjs.send(serviceID, templateID, {
+    from_name: "Blue",
+to_name: "Guy",
+message: "Hey",
+reply_to: "Idk",
+}, 'SgfQGqlvhMgVOnKg9');
+
+}*/
+
+
+
+
+/*
+.then((res) => {
+    $('#firstinput').value = "";
+    $('#secondinput').value = "";
+    $('emailfield').value = "";
+    $('#textarea').value = "";
+    console.log(res);
+
+
+    alert("Email Sent Successfully.");
+}).catch((err) => alert(err));
+} */
 

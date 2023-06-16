@@ -142,20 +142,21 @@
                                 </div>
 
                                 <div class="contact-form-container">
-                                        <form class="contact-form" action="https://getform.io/f/9af3c334-1f95-4f20-9c3f-2e4e6598065d" method="POST" enctype="multipart/form-data">
+                                    <!--action="https://getform.io/f/9af3c334-1f95-4f20-9c3f-2e4e6598065d" method="POST"-->
+                                        <form id="form" class="contact-form">
                                           <div class="name-container">
                                             <div class="col-lg-6 first-name">
-                                            <input id="first-input" placeholder="Your name"  type="text" name="first-name" tabindex="1" required autofocus>
+                                            <input id="firstinput" placeholder="Your name"  type="text" name="from_name" tabindex="1" required autofocus>
                                           </div>  
                                            <div class="col-lg-6 last-name">
-                                                <input id="second-input" placeholder="Your last name"  type="text" name="last-name" tabindex="2">
+                                                <input id="secondinput" placeholder="Your last name"  type="text" name="to_name" tabindex="2" required>
                                            </div>
                                         </div>
-                                            <input class="email-input input-margin form-padding" placeholder="Your email address" type="email" name="email" tabindex="3">
+                                            <input id="emailfield" class="email-input input-margin form-padding" placeholder="Your email address" type="email" name="reply_to" tabindex="3" required>
                                             <!-- <input class="input-margin your-message form-padding" placeholder="Your message" type="text" name="message" tabindex="4"> -->
-                                            <textarea class="input-margin your-message form-padding" placeholder="Your message" type="text" name="message" tabindex="4"></textarea>
+                                            <textarea id="textarea" class="input-margin your-message form-padding" placeholder="Your message" type="text" name="message" tabindex="4" required></textarea>
                                             <div class="submit-cont">
-                                            <button id="btnsubmit" class="submit-button" type="submit" tabindex="6">Send</button>
+                                            <button id="button" class="submit-button" type="submit" tabindex="6" onclick="sendMail()">Send</button>
                                         </div>                                    
                                     </form>
                                 </div>
@@ -217,6 +218,14 @@
         })
     </script>
 
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("SgfQGqlvhMgVOnKg9");
+   })();
+</script>
 
 
 </body>
