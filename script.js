@@ -216,6 +216,10 @@ document.getElementById('form')
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
+    }).then(() => {
+        let form = $('.contact-form');
+        form[0].reset();
+        console.log('the form has been reset')
     });
 });
 

@@ -790,8 +790,7 @@ display: flex;
 .name-container {
     display: flex;
     height: 10%;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    margin: 1rem;
 }
 
 .col-lg-6 {
@@ -804,7 +803,7 @@ display: flex;
 
 .first-name {
     padding-right: 10px;
-    height: 100%;
+    min-height: 100%;
 }
 
 .last-name {
@@ -816,24 +815,24 @@ display: flex;
     max-width: 100%;
     width: 100%;
     padding-left: 3px;
-    height: 100%;
+    min-height: 100%;
 }
 
 #secondinput {
     max-width: 100%;
     width: 100%;
     padding-left: 3px;
-    height: 100%;
+    min-height: 100%;
 }
 
 
 
 .email-input {
-    height: 10%;
+    min-height: 10%;
 }
 
 .your-message{
-    min-height: 50%;
+    min-height: 40%;
     
 }
 
@@ -847,6 +846,7 @@ display: flex;
 .submit-cont {
     text-align: center;
    min-height: 10%;
+   margin-bottom: 1rem;
 }
 
 
@@ -857,6 +857,8 @@ display: flex;
 
 .input-margin {
     margin-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .form-padding {
@@ -870,10 +872,11 @@ display: flex;
 }
 
 .contact-form-container {
-    background-color: #d4fffe9d;
+   
    
     width: 100%;
     border-radius: 0.5rem;
+    border: 1px solid white;
 }
 
 label {
@@ -881,4 +884,52 @@ label {
     font-size:1rem;
     color: var(--font-primary);
     line-height: 130%;
+}
+
+.noscript {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #000000;
+    /*background-image: linear-gradient(180deg,#030f07,#461a0657);*/
+}
+
+.noscript-msg {
+    text-align: center;
+    width: 80%;
+    font-size: 3rem;
+    background-image: none;
+    color: white;
+    -webkit-text-fill-color: white;
+    margin-top: 1.5rem;
+}
+
+.error-img {
+    width: 15%;
+}
+
+@media screen and (max-width : 1024px) {
+    .noscript {
+        justify-content: flex-start;
+        position: relative;
+        height: 100vh;
+        
+    }
+    .noscript-msg {
+        font-size: 6vw;
+        
+    }
+    .error-img {
+        width: 40%;
+        margin-top: 20%;
+    }
 }
