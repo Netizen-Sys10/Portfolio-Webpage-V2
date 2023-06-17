@@ -279,7 +279,7 @@ transition: all 0.2s linear;
 
 @media screen and (max-width:500px) {
     .message-title {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 }
 
@@ -399,6 +399,13 @@ On load seemingly is done with javascript. */
    /* text-align: center; */
 }
 
+@media screen and (max-width: 1024px) {
+    .menu-list {
+        left: 50%;
+        transform: translate(-50%,0);
+    }
+}
+
 
 
 a {
@@ -427,6 +434,12 @@ a {
     .color-line-two:before {
         left: -15px
     }
+    .color-line-two {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 90vw;
+    }
 }
 
 .link {
@@ -439,15 +452,42 @@ a {
     width: max-content;
 }
 
+@media screen and (max-width: 1024px) {
+    .link-cont {
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        position: relative;
+        margin-bottom: 1.5rem;
+        padding-bottom: 0;
+        display: flex;
+        align-items: center;
+    }
+    .link-cont::before {
+        content:"";
+    width:2px;
+    background:linear-gradient(180deg,#b0f3f1,#ffcfdf);
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:-10px
+    }
+    .color-line-two:before {
+        content: none;
+    }
+    .link {
+        font-size: 1.2rem;
+    }
+}
+
 .link:hover {
     transition: all linear 0.15s;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
    
 }
 
 .current-link {
     transition: all linear 0.15s;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     background-image: linear-gradient(90deg,#b0f3f1,#ffcfdf);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -753,6 +793,7 @@ display: flex;
 .copyright {
     text-align: center;
     margin-bottom: 18px;
+    font-size: 0.9rem;
 }
 
 @media screen and (min-width: 1025px) {
@@ -853,6 +894,15 @@ display: flex;
 .submit-button {
     width: 150px;
     height: 100%;
+    font-family: 'Circular Std Book';
+    font-size: 17px;
+    background-color: #64916a00;
+    color: rgb(255, 255, 255);
+    border-radius: 0.5rem;
+    border: none;
+    border: 1px solid white;
+    letter-spacing: 0.1rem;
+    font-weight: lighter;
 }
 
 .input-margin {

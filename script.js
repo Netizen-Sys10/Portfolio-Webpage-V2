@@ -160,12 +160,12 @@ $('#email').on('click', function () {
    
     console.log('Link2 overview height adjusted ' + $('.overview').height());
 
-    $('.email-address').removeClass('email-reverse');
+    /*$('.email-address').removeClass('email-reverse');
     $('.email-address').addClass('email');
     setTimeout(function () {
         $('.email-address').removeClass('email');
         $('.email-address').addClass('email-reverse');
-    }, 1800)
+    }, 1800)*/
     
 })
 
