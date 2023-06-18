@@ -159,13 +159,6 @@ $('#email').on('click', function () {
     $('.contact-form').css( { 'height' :  $('.picture').height()})
    
     console.log('Link2 overview height adjusted ' + $('.overview').height());
-
-    $('.email-address').removeClass('email-reverse');
-    $('.email-address').addClass('email');
-    setTimeout(function () {
-        $('.email-address').removeClass('email');
-        $('.email-address').addClass('email-reverse');
-    }, 1800)
     
 })
 
@@ -220,46 +213,21 @@ document.getElementById('form')
         let form = $('.contact-form');
         form[0].reset();
         console.log('the form has been reset')
+    }).then(() => {
+        $('.project-show').removeClass('project-show');
+        $('#project-4').addClass('project-show');
+        $('.contact-form').css( { 'height' :  $('.picture').height()})
     });
 });
 
 
 
+$('#btnback').on('click', function () {
 
-/*function sendMail () {
-    debugger;
-    var params = {
-        to_name : $('#firstinput').value,
-        from_name : $('#secondinput').value,
-        reply_to : $('#emailfield').value,
-        message : $('#textarea').value
-    };
+    $('.project-show').removeClass('project-show');
+    $('.first-message').addClass('project-show');
+    $('.current-link').removeClass('current-link')
+    $('#link-3').addClass('current-link');
+    $('.overview').css({ 'height': $('.first-message').height() });
 
-    const serviceID = 'service_czdumbk';
-const templateID = 'template_ss3aryr';
-
-emailjs.send(serviceID, templateID, {
-    from_name: "Blue",
-to_name: "Guy",
-message: "Hey",
-reply_to: "Idk",
-}, 'SgfQGqlvhMgVOnKg9');
-
-}*/
-
-
-
-
-/*
-.then((res) => {
-    $('#firstinput').value = "";
-    $('#secondinput').value = "";
-    $('emailfield').value = "";
-    $('#textarea').value = "";
-    console.log(res);
-
-
-    alert("Email Sent Successfully.");
-}).catch((err) => alert(err));
-} */
-
+})
