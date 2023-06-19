@@ -383,6 +383,12 @@ On load seemingly is done with javascript. */
     .menu {
         margin-top: 4rem;
         margin-bottom: 12rem;
+        display: flex;
+        justify-content: center;
+    }
+    .menu-list {
+        position: absolute;
+       margin-top: 2rem;
     }
 }
 
@@ -399,7 +405,13 @@ On load seemingly is done with javascript. */
    /* text-align: center; */
 }
 
+@media screen and (max-width:500px) {
 
+    .menu-list {
+        position: absolute;
+       margin-top: 1rem;
+    }
+}
 
 a {
     text-decoration: none;
@@ -439,6 +451,13 @@ a {
     width: max-content;
 }
 
+@media screen and (max-width: 1024px) {
+    .link-cont {
+        width: auto;
+        text-align: center;
+    }
+
+}
 .link:hover {
     transition: all linear 0.15s;
     font-size: 1.2rem;

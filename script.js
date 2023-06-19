@@ -60,22 +60,18 @@ $(window).on('resize', () => {
         console.log('overview height adjusted' + $('.overview').height());
     }, 5)
 
-    setTimeout(function () {
-        if ($('.project-image').height() > $('.project-image').width()) {
-            $('.skills-container').css({ 'height': $('.project-image').height() });
-            // $('.skill-icon').css({'width': ($('.project-image').width()-20)/3});
-            //$('.skill-icon').css({'height': 'auto'});
-            console.log('portrait - skills container changed' + $('.skills-container').height());
+    if ($('html').height() >= $('.outer-content-container').height()) {
+        $('.vanta-canvas').css({ 'height': $('html').height() });
+    }
+    else {
+        if ($(window).width() < 500) {
+            $('.vanta-canvas').css({ 'height': $('.outer-content-container').height() + 15 });
         }
-
         else {
-            $('.skills-container').css({ 'height': $('.project-image').height() });
-            //$('.skill-icon').css({'height': ($('.project-image').height()-20)/3});
-            //$('.skill-icon').css({'width': 'auto'});
-            console.log('landscape - skills container changed' + $('.skills-container').height());
+            $('.vanta-canvas').css({ 'height': $('.outer-content-container').height() + 40 });
         }
-
-    }, 5)
+    }
+    
 });
 
 
