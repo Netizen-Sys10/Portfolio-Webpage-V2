@@ -861,6 +861,11 @@ display: flex;
     font-size: 17px;
 }
 
+.submit-button:hover {
+    background-color: #74c485bb;
+    transition: all 1.5s linear;
+}
+
 .input-margin {
     margin-bottom: 1rem;
     margin-left: 1rem;
@@ -905,22 +910,45 @@ label {
     left: 0;
     right: 0;
     margin: 0 auto;
-    background-color: #000000;
+    background-color: var(--bg-primary);
+   
     /*background-image: linear-gradient(180deg,#030f07,#461a0657);*/
 }
+
 
 .noscript-msg {
     text-align: center;
     width: 80%;
+    opacity: 0;
     font-size: 3rem;
     background-image: none;
     color: white;
     -webkit-text-fill-color: white;
     margin-top: 1.5rem;
+    animation-name: opacityOn;
+    animation-duration: 3000ms;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
 }
 
 .error-img {
     width: 15%;
+    opacity: 0;
+    animation-name: opacityOn;
+    animation-duration: 3000ms;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+
+@keyframes opacityOn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 @media screen and (max-width : 1024px) {
@@ -958,5 +986,12 @@ label {
 
 .thank-you {
     font-size: 1.5em;
-    margin: 1rem;
+    margin: 1rem 3rem 2rem;
+}
+
+@media screen and (max-width : 525px) {
+    .thank-you {
+        font-size: 1.2rem;
+        margin: 1rem 1rem 2rem;
+    }
 }

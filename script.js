@@ -191,23 +191,28 @@ console.log($('#firstinput').value)
 
 
 
+
 const btn = document.getElementById('button');
+
+
+
+
+
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
+
    event.preventDefault();
 
-   btn.value = 'Sending...';
-
+   btn.innerHTML = ('Sending...');
    const serviceID = 'default_service';
    const templateID = 'template_ss3aryr';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      btn.value = 'Send Email';
-      alert('Sent!');
+      btn.innerHTML = ('Send');
     }, (err) => {
-      btn.value = 'Send Email';
+        btn.innerHTML = ('Send');
       alert(JSON.stringify(err));
     }).then(() => {
         let form = $('.contact-form');
@@ -231,3 +236,4 @@ $('#btnback').on('click', function () {
     $('.overview').css({ 'height': $('.first-message').height() });
 
 })
+
