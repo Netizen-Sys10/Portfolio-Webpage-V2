@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth !important;
 }
 
 @font-face {
@@ -443,12 +444,14 @@ a {
 
 .link {
    color:#e9e9e9;
+   scroll-behavior: smooth;
 }
 
 
 .link-cont {
     padding-bottom: 0.5rem;
     width: max-content;
+   
 }
 
 @media screen and (max-width: 1024px) {
@@ -579,6 +582,10 @@ display: flex;
     top: 90%;
     left: 38%;
     transform: translate(-50%, -50%);
+}
+
+#email {
+    cursor: pointer;
 }
 
 .email-address {
