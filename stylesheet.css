@@ -108,7 +108,8 @@ p {
     box-sizing:border-box;
     justify-content:center;
     align-items:flex-start;
-    display:flex; 
+    display:flex;
+    
 }
 
 
@@ -126,7 +127,8 @@ and for that  we need to cover the whole viewport */
 
 .outer-content-container {
     width:100vw;
-    max-width:1280px;
+    max-width:1280px; /*1280px*/
+    
     box-sizing:border-box;
     margin-top:0;
     margin-bottom:0;
