@@ -14,10 +14,10 @@ exception being a 3d background imported from Vanta.js.
 
 
 ## Lessons Learned 
-- Tooltips, Font faces & declaring variables
-- Absolute positioning & overlays
-- Transform & Transition properties
-- Dynamic resizing of elements during run time
+- Tooltips, Font faces & declaring variables in CSS
+- Absolute positioning & overlays 
+- Transform & Transition properties 
+- Dynamic resizing of elements during run time with JavaScript
 
 
 
