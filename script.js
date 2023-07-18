@@ -128,6 +128,15 @@ $('#link-4').on('click', function () {
 });
 
 
+$('#link-5').on('click', function () {
+
+    $('.project-show').removeClass('project-show');
+    $('#project-5').addClass('project-show');
+    $('.overview').css({ 'height': projectOne.height() });
+    console.log('Link5 overview height adjusted ' + $('.overview').height());
+});
+
+
 $('#logo-link').on('click', function () {
 
     $('.project-show').removeClass('project-show');
@@ -158,21 +167,9 @@ $('#email').on('click', function () {
     
 })
 
-/*let form = $('.contact-form');
-$('#btnsubmit').on('click', () => {
-    setTimeout(function () {
-        //form[0].reset();
-        console.log('the form has been reset')
-    }, 2000)
-   
-})*/
-
 
 
 var link_array = $(".link");
-//link_array.each( function () {
-//  $('.link').addClass('current-link');
-//});
 console.log(link_array)
 
 for (let link of link_array) {
@@ -187,12 +184,8 @@ console.log($('#firstinput').value)
 
 
 
-
+// Email.js
 const btn = document.getElementById('button');
-
-
-
-
 
 
 document.getElementById('form')
