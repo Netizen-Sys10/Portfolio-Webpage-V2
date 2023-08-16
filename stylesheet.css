@@ -862,7 +862,7 @@ display: flex;
 
 .your-message{
     min-height: 40%;
-    
+    resize: none;
 }
 
 .your-message::placeholder {

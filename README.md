@@ -18,6 +18,7 @@ exception being a 3d background imported from Vanta.js.
 - Absolute positioning & overlays 
 - Transform & Transition properties 
 - Dynamic resizing of elements during run time with JavaScript
+- Contact form with Email.js
 
 
 
