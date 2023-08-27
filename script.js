@@ -5,14 +5,10 @@ $(window).on('load', () => {
         if ($('.project-image').height() > $('.project-image').width()) {
             // set the overview container to the height of the current project
             $('.overview').css({ 'height': $('.project-show').height() });
-            console.log('on load overview - portrait: ' + $('.overview').height())
-            console.log('on load skills-container - portrait: ' + $('.skills-container').height())
         }
         else {
             $('.overview').css({ 'height': $('.project-show').height() });
             $('.skills-container').css({ 'height': $('.project-image').height() });
-            console.log('on load - landscape: ' + $('.overview').height())
-            console.log('on load - landscape: ' + $('.skills-container').height())
         }
     }, 5)
 
@@ -57,7 +53,6 @@ $(window).on('resize', () => {
     // Whenever you resize make overview as high as the current project 
     setTimeout(function () {
         $('.overview').css({ 'height': $('.project-show').height() });
-        console.log('overview height adjusted' + $('.overview').height());
     }, 5)
 
     if ($('html').height() >= $('.outer-content-container').height()) {
@@ -94,7 +89,6 @@ linkOne.on('click', function () {
     $('.project-show').removeClass('project-show');
     projectOne.addClass('project-show');
     $('.overview').css({ 'height': projectOne.height() });
-    console.log('Link1 overview height adjusted ' + $('.overview').height());
 });
 
 
@@ -105,7 +99,6 @@ $('#link-2').on('click', function () {
     $('.project-show').removeClass('project-show');
     projectTwo.addClass('project-show');
     $('.overview').css({ 'height': projectOne.height() });
-    console.log('Link2 overview height adjusted ' + $('.overview').height());
 });
 
 
@@ -115,7 +108,6 @@ $('#link-3').on('click', function () {
     $('.first-message').addClass('project-show');
     $('.overview').css({ 'height': $('.first-message').height() });
 
-    console.log('Link3 overview height adjusted ' + $('.overview').height());
 });
 
 
@@ -124,7 +116,6 @@ $('#link-4').on('click', function () {
     $('.project-show').removeClass('project-show');
     projectThree.addClass('project-show');
     $('.overview').css({ 'height': projectOne.height() });
-    console.log('Link4 overview height adjusted ' + $('.overview').height());
 });
 
 
@@ -133,7 +124,6 @@ $('#link-5').on('click', function () {
     $('.project-show').removeClass('project-show');
     $('#project-5').addClass('project-show');
     $('.overview').css({ 'height': projectOne.height() });
-    console.log('Link5 overview height adjusted ' + $('.overview').height());
 });
 
 
@@ -148,8 +138,6 @@ $('#logo-link').on('click', function () {
     setTimeout(function () {
         $('#logo-link').removeClass('logo-rotate');
     }, 200)
-
-    console.log('Link4 overview height adjusted ' + $('.overview').height());
 })
 
 
@@ -162,15 +150,11 @@ $('#email').on('click', function () {
 
     $('.overview').css({ 'height': projectOne.height() });
     $('.contact-form').css( { 'height' :  $('.picture').height()})
-   
-    console.log('Link2 overview height adjusted ' + $('.overview').height());
-    
 })
 
 
 
 var link_array = $(".link");
-console.log(link_array)
 
 for (let link of link_array) {
     $(link).on('click', () => {
@@ -179,8 +163,6 @@ for (let link of link_array) {
         $(link).addClass('current-link');
     })
 }
-
-console.log($('#firstinput').value)
 
 
 
@@ -206,7 +188,6 @@ document.getElementById('form')
     }).then(() => {
         let form = $('.contact-form');
         form[0].reset();
-        console.log('the form has been reset')
     }).then(() => {
         $('.project-show').removeClass('project-show');
         $('#project-4').addClass('project-show');
