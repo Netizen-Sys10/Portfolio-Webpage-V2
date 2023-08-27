@@ -97,7 +97,9 @@ p {
     right: 0;
     overflow-y: auto;
     height: 100%;
-    background-color: var(--bg-primary)
+    background-color: var(--bg-primary);
+    background-image: url(Images/tree-bg.jpg);
+    background-size: cover;
 }
 
 
@@ -135,7 +137,7 @@ and for that  we need to cover the whole viewport */
     padding:7.5px;
     display:flex;
     position:relative;
-    background-color: var(--bg-primary);
+    background-color: #0c141cde;
 }
 
 @media screen and (min-width:500px) {
@@ -1022,9 +1024,13 @@ label {
     align-items: center;
 }
 
+.back-button.submit-button {
+    width: 100px;
+}
+
 .back-button {
     background-color: #ccf0ef1c;
-    height: 75px;
+    height: 50px;
     font-size: 1.5rem;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
