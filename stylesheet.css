@@ -507,7 +507,7 @@ a {
 .project-description {
 max-height: 100%;
 margin: 0.5rem 0;
-border-bottom: 1px solid;
+/*border-bottom: 1px solid;*/
 /*border-color: #c4c4c4;*/
 display: flex;
 }
