@@ -130,7 +130,7 @@ and for that  we need to cover the whole viewport */
 .outer-content-container {
     width:100vw;
     max-width:1280px; /*1280px*/
-    min-height: 100vh;
+
     box-sizing:border-box;
     margin-top:0;
     margin-bottom:0;
@@ -139,6 +139,12 @@ and for that  we need to cover the whole viewport */
     position:relative;
     background-color: #0c141cde;
 }
+
+@media screen and (max-width:1024px) {
+    .outer-content-container {
+        min-height: 100vh;
+    }
+   }
 
 @media screen and (min-width:500px) {
  .outer-content-container {
