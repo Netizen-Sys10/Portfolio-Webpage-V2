@@ -130,7 +130,7 @@ and for that  we need to cover the whole viewport */
 .outer-content-container {
     width:100vw;
     max-width:1280px; /*1280px*/
-    
+    min-height: 100vh;
     box-sizing:border-box;
     margin-top:0;
     margin-bottom:0;
