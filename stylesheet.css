@@ -508,8 +508,26 @@ a {
 max-height: 100%;
 margin: 0.5rem 0;
 border-bottom: 1px solid;
-border-color: #c4c4c4;
+/*border-color: #c4c4c4;*/
 display: flex;
+}
+
+input[type="text"]
+{
+    font-family: 'Circular Std Book';
+    font-size: 1rem;
+}
+
+input[type="email"]
+{
+    font-family: 'Circular Std Book';
+    font-size: 1rem;
+}
+
+textarea[type="text"]
+{
+    font-family: 'Circular Std Book';
+    font-size: 1rem;
 }
 
 
