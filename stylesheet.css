@@ -64,7 +64,7 @@ h2 {
     display: inline-block;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1150px) {
     h2 {
         font-size: 2.5rem;
     }
@@ -117,7 +117,7 @@ p {
 
 /* If wider than a tablet, we'll center the child content-container
 and for that  we need to cover the whole viewport */
-@media screen and (min-width:1025px) {
+@media screen and (min-width:1150px) {
     .screen-width-container {
      height:100vh;
      max-height:100vh;
@@ -140,7 +140,7 @@ and for that  we need to cover the whole viewport */
     background-color: #0c141cde;
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1150px) {
     .outer-content-container {
         min-height: 100vh;
     }
@@ -215,7 +215,7 @@ and for that  we need to cover the whole viewport */
     margin-top: 40px;
 }
 
-@media screen and (min-width:1025px) {
+@media screen and (min-width:1151px) {
     .content {
         flex-direction: row;
         justify-content: space-between;
@@ -237,7 +237,7 @@ and for that  we need to cover the whole viewport */
 
 
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     .overview-height {
         min-height: 450px;
     }
@@ -280,7 +280,7 @@ transition: all 0.2s linear;
     display: inline-block;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     .message-title {
         font-size: 5rem;
         margin-bottom: 1.5rem;
@@ -361,7 +361,7 @@ On load seemingly is done with javascript. */
     transform: scaleX(0);
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1150px) {
     .project  {
         min-height: 250px;
 
@@ -379,7 +379,7 @@ On load seemingly is done with javascript. */
     flex-basis: 30%;
 }
 
-@media screen and (min-width : 1025px) {
+@media screen and (min-width : 1151px) {
     .menu {
         position: relative;
         top: -18px;
@@ -387,7 +387,7 @@ On load seemingly is done with javascript. */
     
 }
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:1150px) {
     .project  {
         min-height: 250px;
     }
@@ -443,7 +443,7 @@ a {
     position: relative;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     .links {
         padding: 30px 0;
     }
@@ -464,7 +464,7 @@ a {
    
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     .link-cont {
         width: auto;
         text-align: center;
@@ -505,7 +505,7 @@ a {
     /*text-align: center;*/
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     .menu-title {
         text-align: center;
     }
@@ -625,7 +625,7 @@ textarea[type="text"]
     transition: all 0s linear;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1150px) {
     .email-address {
         bottom: 30px;
         left: 50%;
@@ -739,7 +739,7 @@ textarea[type="text"]
     }
 }
 
-@media screen and (min-width : 1025px) {
+@media screen and (min-width : 1151px) {
     .overlay-text {
         top: 20%;
         left: 50%;
@@ -810,7 +810,7 @@ textarea[type="text"]
     font-size: 0.9rem;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 1151px) {
     .copyright {
         text-align: right;
         margin-bottom: 0;
@@ -1005,7 +1005,7 @@ label {
     }
 }
 
-@media screen and (max-width : 1024px) {
+@media screen and (max-width : 1150px) {
     .noscript {
         justify-content: flex-start;
         position: relative;
