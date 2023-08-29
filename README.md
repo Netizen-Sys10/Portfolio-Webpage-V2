@@ -9,8 +9,7 @@ effective space usage and sleek UI.<br>
 
 
 ## Limitations
-In order to get more familiar with creating simple animations & transitions in CSS & Javascript, no external libraries like Bootstrap were used, the only
-exception being a 3d background imported from Vanta.js.
+In order to get more familiar with creating simple animations & transitions in CSS & Javascript, no external libraries like Bootstrap were used.
 
 
 ## Lessons Learned 
